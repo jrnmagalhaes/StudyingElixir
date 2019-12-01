@@ -4,6 +4,8 @@ defmodule ModulePlayground do
 
     alias ModulePlayground.Misc.Util.Math, as: MyMath
 
+    require Integer
+
     def say_hello do
         inspect "Hello World!"
     end
@@ -16,5 +18,9 @@ defmodule ModulePlayground do
 
     def print_sum do
         MyMath.add(1, 2)
+    end
+
+    def print_is_even(num) do
+        puts "is #{num} even? #{Integer.is_even(num)}"
     end
 end
